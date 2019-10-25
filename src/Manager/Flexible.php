@@ -157,6 +157,11 @@ class Flexible implements ManagerInterface
         return \React\Promise\all($promises);
     }
 
+    public function getTotal()
+    {
+        return count($this->workers);
+    }
+    
     public function info()
     {
         $count = count($this->workers);
