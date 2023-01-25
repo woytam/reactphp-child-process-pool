@@ -110,7 +110,6 @@ class Flexible implements PoolInterface
             if ($stop <= time() AND $this->manager->getTotal() > (int)$this->options[Options::MIN_SIZE]) {
                 $this->loop->cancelTimer($timer);
                 $worker->terminate();
-                return;
             }
         });
     }
